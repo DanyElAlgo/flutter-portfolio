@@ -74,7 +74,9 @@ flutter:
   assets:
     - assets/content/paragraphs.json
     - assets/content/contact.json
+    - assets/content/projects.json
     - assets/icons/
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
