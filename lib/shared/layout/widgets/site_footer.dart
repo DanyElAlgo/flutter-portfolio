@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
-class SiteFooter extends StatelessWidget {
+import '../../../app/router.dart';
+import '../../../features/contact/application/contact_provider.dart';
+import '../../../features/contact/domain/contact_link.dart';
+import '../../utils/url_launcher_helper.dart';
+
+class SiteFooter extends ConsumerWidget {
   const SiteFooter({super.key});
 
-  static const List<String> _navLinks = ['Home', 'About', 'Contact'];
-  static const List<String> _contacts = [
-    'email',
-    'github',
-    'linkedin',
-  ];
-
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final year = DateTime.now().year;
+    final contactLinks = ref.watch(contactProvider).maybeWhen(
+          data: (info) => info.links,
+          orElse: () => const <ContactLink>[],
+        );
 
     return Container(
       width: double.infinity,
@@ -28,8 +32,26 @@ class SiteFooter extends StatelessWidget {
               spacing: 48,
               runSpacing: 24,
               children: [
-                _FooterColumn(title: 'Navigation', items: _navLinks),
-                _FooterColumn(title: 'Contact', items: _contacts),
+                _FooterColumn(
+                  title: 'Navigation',
+                  children: [
+                    for (final dest in navDestinations)
+                      _FooterLink(
+                        label: dest.label,
+                        onTap: () => context.go(dest.path),
+                      ),
+                  ],
+                ),
+                _FooterColumn(
+                  title: 'Contact',
+                  children: [
+                    for (final link in contactLinks)
+                      _FooterLink(
+                        label: link.label,
+                        onTap: () => launchExternalUrl(link.uri),
+                      ),
+                  ],
+                ),
               ],
             ),
           ),
@@ -47,10 +69,10 @@ class SiteFooter extends StatelessWidget {
 }
 
 class _FooterColumn extends StatelessWidget {
-  const _FooterColumn({required this.title, required this.items});
+  const _FooterColumn({required this.title, required this.children});
 
   final String title;
-  final List<String> items;
+  final List<Widget> children;
 
   @override
   Widget build(BuildContext context) {
@@ -66,12 +88,28 @@ class _FooterColumn extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 12),
-        for (final item in items)
-          Padding(
-            padding: const EdgeInsets.only(bottom: 6),
-            child: Text(item, style: theme.textTheme.bodyMedium),
-          ),
+        ...children,
       ],
+    );
+  }
+}
+
+class _FooterLink extends StatelessWidget {
+  const _FooterLink({required this.label, required this.onTap});
+
+  final String label;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 6),
+      child: InkWell(
+        onTap: onTap,
+        child: Text(label, style: theme.textTheme.bodyMedium),
+      ),
     );
   }
 }
