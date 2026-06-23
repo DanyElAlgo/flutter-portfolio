@@ -1,0 +1,9 @@
+{
+  "recipientEmail": "eldanielitu@gmail.com",
+  "links": [
+    { "label": "Email",    "type": "email", "value": "eldanielitu@gmail.com" },
+    { "label": "GitHub",   "type": "url",   "value": "https://github.com/DanyElAlgo", "icon": "assets/icons/GitHub_Invertocat_Black.svg" },
+    { "label": "LinkedIn", "type": "url",   "value": "https://www.linkedin.com/in/daniel-roland-pc", "icon": "assets/icons/LI-In-Bug.png" },
+    { "label": "Whatsapp (+591 68829531)", "type": "url",   "value": "https://wa.me/qr/K7J7Q2UOA7HWD1", "icon": "assets/icons/WhatsApp_icon.png"}
+  ]
+}
