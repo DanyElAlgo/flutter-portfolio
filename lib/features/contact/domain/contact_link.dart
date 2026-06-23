@@ -15,11 +15,14 @@ class ContactLink {
     required this.label,
     required this.type,
     required this.value,
+    this.icon,
   });
 
   final String label;
   final ContactLinkType type;
   final String value;
+
+  final String? icon;
 
   Uri get uri => switch (type) {
         ContactLinkType.email => Uri(scheme: 'mailto', path: value),
@@ -31,6 +34,7 @@ class ContactLink {
       label: json['label'] as String? ?? '',
       type: ContactLinkType.fromName(json['type'] as String?),
       value: json['value'] as String? ?? '',
+      icon: json['icon'] as String?,
     );
   }
 }
