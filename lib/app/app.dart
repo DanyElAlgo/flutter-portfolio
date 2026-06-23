@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../features/content/presentation/home_page.dart';
-import '../shared/layout/app_shell.dart';
+import 'router.dart';
 import 'theme.dart';
 
 class PortfolioApp extends StatelessWidget {
@@ -9,11 +8,11 @@ class PortfolioApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Portfolio',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
-      home: const AppShell(child: HomePage()),
+      routerConfig: appRouter,
     );
   }
 }
