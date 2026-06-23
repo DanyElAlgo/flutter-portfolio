@@ -1,0 +1,8 @@
+{
+  "recipientEmail": "eldanielitu@gmail.com",
+  "links": [
+    { "label": "Email",    "type": "email", "value": "eldanielitu@gmail.com" },
+    { "label": "GitHub",   "type": "url",   "value": "https://github.com/DanyElAlgo" },
+    { "label": "LinkedIn", "type": "url",   "value": "https://www.linkedin.com/in/daniel-roland-pc" }
+  ]
+}
