@@ -38,6 +38,12 @@ dependencies:
   # State management: see README for the Riverpod vs Cubit rationale.
   flutter_riverpod: ^2.6.1
 
+  # Declarative, URL-based routing (shared navbar/footer via ShellRoute).
+  go_router: ^14.6.2
+
+  # Launches external URLs and mailto: links from the contact page/footer.
+  url_launcher: ^6.3.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -64,6 +70,7 @@ flutter:
   # Edit assets/content/paragraphs.json to change the showcased text.
   assets:
     - assets/content/paragraphs.json
+    - assets/content/contact.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
