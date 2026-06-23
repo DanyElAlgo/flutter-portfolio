@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Itersapiens: Student Housing app",
+    "description": "Web SPA for room searching in Bolivia, specially dedicated to exchange students and local householders",
+    "imagePath": "assets/images/itersapiens.png",
+    "repoUrl": "https://github.com/rafael1199v/housing-student-app.git",
+    "deployedUrl": "https://itersapiens.rafael-vargas.dev/"
+  },
+  {
+    "title": "ERP modules: Inventory, Sales, Purchases",
+    "description": ".NET backend for ERP management. Currently the purchases module is deployed.",
+    "repoUrl": "https://github.com/DanyElAlgo/ISW-312-inventory.git",
+    "deployedUrl": "https://erp-purchases.eldanielitu.dev/swagger/index.html"
+  }
+]
