@@ -47,6 +47,12 @@ dependencies:
   # Renders SVG brand logos (e.g. the GitHub icon) crisply at any size.
   flutter_svg: ^2.0.17
 
+  # Builds the CV as a native vector PDF document at runtime (no PDF committed).
+  pdf: ^3.12.0
+
+  # Triggers the PDF download (web) / share sheet (Android) from the CV page.
+  printing: ^5.14.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -75,6 +81,7 @@ flutter:
     - assets/content/paragraphs.json
     - assets/content/contact.json
     - assets/content/projects.json
+    - assets/content/cv.json
     - assets/icons/
     - assets/images/
 

@@ -1,0 +1,54 @@
+{
+  "name": "Daniel Roland Peñaranda Colque",
+  "title": "Software Engineer",
+  "contact": {
+    "email": "eldanielitu@gmail.com",
+    "phone": "+591 68829531",
+    "location": "Santa Cruz - Bolivia"
+  },
+  "summary": "Very passionate about how the systems work behind the scenes and understanding the magic of optimization. Easy to adapt and always in need to solve any doubts in my environment.",
+  "profiles": [
+    { "label": "GitHub", "url": "https://github.com/DanyElAlgo" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/daniel-roland-pc" }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Católica Boliviana",
+      "program": "Software Engineering",
+      "location": "Santa Cruz - Bolivia",
+      "period": "2023 - Present",
+      "url": "https://www.ucb.edu.bo/"
+    }
+  ],
+  "projects": [
+    { "name": "ML-Powered Traffic Jam Predictor", "date": "Late 2025" },
+    { "name": "Flowerdex - LLM-powered Flower Index/Encyclopedia", "date": "Late 2025" }
+  ],
+  "technologies": ["Python", "C#", "SQL", "Kotlin", "C++", "JavaScript"],
+  "tools": ["KNIME", "SQL Server", "Docker", "Azure DevOps"],
+  "skills": ["Adaptability", "Teamwork", "Organization"],
+  "certifications": [
+    {
+      "title": "L1: Basic Proficiency in KNIME Analytics Platform",
+      "issuer": "KNIME",
+      "date": "July 2025",
+      "url": "https://www.credly.com/badges/76736656-379d-43a6-9903-169357346330/public_url"
+    },
+    {
+      "title": "Diploma of excellence",
+      "issuer": "Universidad Católica Boliviana",
+      "date": "September 2024"
+    },
+    {
+      "title": "Networking Academy Learn-A-Thon 2024",
+      "issuer": "Cisco",
+      "date": "January 2024",
+      "url": "https://www.credly.com/badges/b8405c60-a4e1-446f-84d9-3e9d9058266c/public_url"
+    }
+  ],
+  "languages": [
+    { "name": "Spanish", "level": "Native" },
+    { "name": "English", "level": "B2" }
+  ],
+  "interests": ["Music", "Excel", "Reading"]
+}
